@@ -4,11 +4,22 @@ import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private int id;
     private String login;
     private String avatar_url;
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public int getId() {
         return id;
@@ -37,6 +48,6 @@ public class User {
     @NonNull
     @Override
     public String toString() {
-        return this.login+"\n"+this.avatar_url+"\n";
+        return this.login;
     }
 }

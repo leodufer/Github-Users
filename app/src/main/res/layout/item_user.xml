@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="16dp"
+        />
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user login"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/textViewURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http://api.github.com/users/login"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogin"
+        android:layout_marginStart="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
